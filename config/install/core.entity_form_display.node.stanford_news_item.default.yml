@@ -4,8 +4,7 @@ dependencies:
   config:
     - entity_browser.browser.image_browser
     - field.field.node.stanford_news_item.body
-    - field.field.node.stanford_news_item.field_mrc_event_series
-    - field.field.node.stanford_news_item.field_mrc_image
+    - field.field.node.stanford_news_item.field_news_image
     - field.field.node.stanford_news_item.field_s_news_byline
     - field.field.node.stanford_news_item.field_s_news_categories
     - field.field.node.stanford_news_item.field_s_news_date
@@ -26,7 +25,6 @@ third_party_settings:
       children:
         - field_s_news_featured
         - field_s_news_categories
-        - field_hs_event_series
       parent_name: ''
       weight: 8
       format_type: fieldset
@@ -53,12 +51,6 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_hs_event_series:
-    type: options_select
-    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }

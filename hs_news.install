@@ -2,7 +2,7 @@
 
 /**
  * @file
- * mrc_news.install
+ * hs_news.install
  */
 
 use Drupal\field\Entity\FieldStorageConfig;

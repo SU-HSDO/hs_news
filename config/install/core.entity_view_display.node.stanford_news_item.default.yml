@@ -3,8 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.stanford_news_item.body
-    - field.field.node.stanford_news_item.field_mrc_event_series
-    - field.field.node.stanford_news_item.field_mrc_image
+    - field.field.node.stanford_news_item.field_news_image
     - field.field.node.stanford_news_item.field_s_news_byline
     - field.field.node.stanford_news_item.field_s_news_categories
     - field.field.node.stanford_news_item.field_s_news_date
@@ -20,35 +19,6 @@ dependencies:
     - text
     - user
 third_party_settings:
-  mrc_ds_blocks:
-    'menu_block:main':
-      config:
-        provider: menu_block
-        admin_label: ''
-        label: 'Main navigation'
-        label_display: visible
-        level: '1'
-        depth: '0'
-        expand: 1
-        parent: 'main:'
-        label_type: root
-        follow: 1
-        follow_parent: '0'
-        suggestion: main
-      parent_name: ''
-      weight: 2
-      region: sidebar
-    local_tasks_block:
-      config:
-        provider: core
-        admin_label: ''
-        label: Tabs
-        label_display: 0
-        primary: 1
-        secondary: 1
-      parent_name: ''
-      weight: 1
-      region: page_title
   ds:
     layout:
       id: pattern_node_simple
@@ -65,7 +35,7 @@ third_party_settings:
       sidebar:
         - 'menu_block:main'
       image:
-        - field_mrc_image
+        - field_news_image
       above_break:
         - field_s_news_date
         - field_s_news_link
@@ -96,7 +66,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: below_break
-  field_mrc_image:
+  field_news_image:
     type: media_image_formatter
     weight: 3
     region: image
@@ -136,7 +106,6 @@ content:
       target: ''
     third_party_settings: {  }
 hidden:
-  field_mrc_event_series: true
   field_s_news_categories: true
   field_s_news_featured: true
   field_s_news_meta_tags: true
