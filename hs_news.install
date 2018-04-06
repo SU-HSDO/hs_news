@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * @file
+ * hs_news.install
+ */
+
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
